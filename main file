@@ -1,0 +1,41 @@
+<html>
+<body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<p> Test scores for this class are: </p>
+<ul>98</ul>
+<ul>77</ul>
+<ul>87</ul>
+<ul>92</ul>
+<ul>101</ul>
+<ul>96</ul>
+
+<button>Final class grade</button>
+<p id="scores"></p>
+
+
+<script>
+
+var rosTestScores  = [98, 77, 87, 92, 101, 96];
+var i = 0;
+
+
+function grade (){
+    var sum = 0;
+    for (i; i<rosTestScores.length; i++){
+        sum = sum + rosTestScores[i];              
+    }  
+    var average = sum / rosTestScores.length;
+    $('button').click(function (){
+        $("#scores").append("Your grade for the class is " + average)
+    });
+    
+}
+
+grade();
+
+
+</script>
+
+</body>
+</html>
